@@ -3,6 +3,21 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      colors: {
+        navyBlue: {
+          light: "#1E213A",
+          dark: "#100E1D",
+          text: "#616475",
+        },
+        blue1: "#3C47E9",
+        gray: {
+          light: "#E7E7EB",
+          dark: "#6E707A",
+          border: "#616475",
+          text1: "#A09FB1",
+          text2: "#88869D",
+        },
+      },
       fontFamily: {
         rale: ["Raleway"],
         mon: ["Montserrat"],
