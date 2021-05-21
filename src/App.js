@@ -1,7 +1,10 @@
+import Today from "./components/Today";
+
 function App() {
   return (
-    <div className="p-6 font-mon">
+    <div className="font-rale font-medium">
       <p>tailwind</p>
+      <Today />
     </div>
   );
 }

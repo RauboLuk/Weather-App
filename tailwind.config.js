@@ -3,6 +3,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      height: {
+        bg: "376px",
+      },
       colors: {
         navyBlue: {
           light: "#1E213A",
@@ -21,6 +24,9 @@ module.exports = {
       fontFamily: {
         rale: ["Raleway"],
         mon: ["Montserrat"],
+      },
+      fontSize: {
+        "10xl": "9rem",
       },
     },
   },
