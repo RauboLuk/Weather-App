@@ -6,6 +6,9 @@ module.exports = {
       height: {
         bg: "376px",
       },
+      width: {
+        30: "7.5rem",
+      },
       colors: {
         navyBlue: {
           light: "#1E213A",
