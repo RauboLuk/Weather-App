@@ -8,6 +8,10 @@ module.exports = {
       },
       width: {
         30: "7.5rem",
+        82: "20.5rem",
+      },
+      minHeight: {
+        40: "10rem",
       },
       colors: {
         navyBlue: {
@@ -22,6 +26,9 @@ module.exports = {
           border: "#616475",
           text1: "#A09FB1",
           text2: "#88869D",
+        },
+        yellow: {
+          progress: "#FFEC65",
         },
       },
       fontFamily: {
