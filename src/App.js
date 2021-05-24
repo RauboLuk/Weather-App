@@ -1,6 +1,7 @@
 import Today from "./components/Today";
 import Week from "./components/Week";
 import Highlights from "./components/Highlights";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Today />
       <Week />
       <Highlights />
+      <Footer />
     </div>
   );
 }

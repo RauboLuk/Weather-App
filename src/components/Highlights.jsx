@@ -33,7 +33,10 @@ const Highlights = () => {
             </div>
             <div className="relative">
               <div className="w-full h-2 bg-gray-light rounded"></div>
-              <div className="absolute top-0 w-1/2 h-2 bg-yellow-progress rounded"></div>
+              <div
+                className="absolute top-0 w-1/2 h-2 bg-yellow-progress rounded"
+                id="humidity_bar"
+              ></div>
             </div>
             <p className="mt-1 self-end">%</p>
           </div>
