@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="font-rale font-medium">
+    <div className="min-h-screen h-full font-rale font-medium xl:grid xl:grid-cols-3 xl:grid-rows-layout">
       <Today />
       <Week />
       <Highlights />

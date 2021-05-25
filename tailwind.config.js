@@ -38,6 +38,9 @@ module.exports = {
       fontSize: {
         "10xl": "9rem",
       },
+      gridTemplateRows: {
+        layout: "repeat(2, minmax(0, max-content)) 1fr",
+      },
     },
   },
   variants: {

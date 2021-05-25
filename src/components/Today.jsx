@@ -2,17 +2,18 @@ import GpsFixedIcon from "@material-ui/icons/GpsFixed";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import Clear from "../assets/images/Clear.png";
 import background from "../assets/images/Cloud-background.png";
+import RoundedButton from "./RoundedButton";
 
 const Today = () => {
   return (
-    <div className="bg-navyBlue-light pb-24">
-      <header className="flex justify-between px-3 pt-4">
-        <button className="bg-gray-dark text-gray-light px-4 max-h-10 text-base">
+    <div className="bg-navyBlue-light pb-24 xl:col-span-1 xl:row-span-3">
+      <header className="m-auto max-w-screen-md flex justify-between px-3 pt-4 md:pt-10 md:px-8">
+        <button className="bg-gray-dark text-gray-light px-4 max-h-10 text-base focus:ring-2 focus:ring-blue-400">
           Seach for places
         </button>
-        <button className="bg-gray-dark text-gray-light w-10 h-10 rounded-full">
+        <RoundedButton>
           <GpsFixedIcon />
-        </button>
+        </RoundedButton>
       </header>
       <div className="h-bg bg-center relative flex align-middle">
         <img src={Clear} alt="clear" className="m-auto" />
