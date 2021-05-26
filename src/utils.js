@@ -1,5 +1,6 @@
 import format from "date-fns/format";
 import isValid from "date-fns/isValid";
+import isTomorrow from "date-fns/isTomorrow";
 import formatRelative from "date-fns/formatRelative";
 import Clear from "./assets/images/Clear.png";
 import Hail from "./assets/images/Hail.png";
@@ -13,8 +14,10 @@ import Snow from "./assets/images/Snow.png";
 import Thunderstorm from "./assets/images/Thunderstorm.png";
 
 export const formatDate = (date) => {
-  if (!isValid(new Date(date))) return "";
-  return format(new Date(date), "eee, d MMM");
+  const dateObj = new Date(date);
+  if (!isValid(dateObj)) return "";
+  if (isTomorrow(dateObj)) return "Tomorrow";
+  return format(dateObj, "eee, d MMM");
 };
 
 export const relativeDate = (date) => {
