@@ -32,8 +32,8 @@ function App() {
   return (
     <div className="min-h-screen h-full font-rale font-medium xl:grid xl:grid-cols-3 xl:grid-rows-layout">
       <Today weather={data?.consolidated_weather[0]} setCoords={setCoords} city={data?.title} />
-      <Week />
-      <Highlights />
+      <Week weatherWeek={data?.consolidated_weather}  />
+      <Highlights weather={data?.consolidated_weather[0]} />
       <Footer />
     </div>
   );
