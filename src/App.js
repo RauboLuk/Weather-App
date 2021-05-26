@@ -27,12 +27,31 @@ function App() {
     };
   }, [getWeather, manualCancel, woeid]);
 
-  console.log(data);
+  useEffect(() => {
+    localStorage.setItem("unit", unit);
+  }, [unit]);
+
+  useEffect(() => {
+    localStorage.setItem("coords", coords);
+  }, [coords]);
+
+  useEffect(() => {
+    localStorage.setItem("woeid", woeid);
+  }, [woeid]);
 
   return (
     <div className="min-h-screen h-full font-rale font-medium xl:grid xl:grid-cols-3 xl:grid-rows-layout">
-      <Today weather={data?.consolidated_weather[0]} setCoords={setCoords} city={data?.title} />
-      <Week weatherWeek={data?.consolidated_weather}  />
+      <Today
+        weather={data?.consolidated_weather[0]}
+        setCoords={setCoords}
+        city={data?.title}
+        unit={unit}
+      />
+      <Week
+        weatherWeek={data?.consolidated_weather}
+        unit={unit}
+        setUnit={setUnit}
+      />
       <Highlights weather={data?.consolidated_weather[0]} />
       <Footer />
     </div>

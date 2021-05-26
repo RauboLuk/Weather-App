@@ -15,14 +15,17 @@ import Thunderstorm from "./assets/images/Thunderstorm.png";
 
 export const formatDate = (date) => {
   const dateObj = new Date(date);
+
   if (!isValid(dateObj)) return "";
   if (isTomorrow(dateObj)) return "Tomorrow";
   return format(dateObj, "eee, d MMM");
 };
 
 export const relativeDate = (date) => {
-  if (!isValid(new Date(date))) return "";
-  return formatRelative(new Date(), new Date(date)).split(" ")[0];
+  const dateObj = new Date(date);
+
+  if (!isValid(dateObj)) return "";
+  return formatRelative(new Date(), dateObj).split(" ")[0];
 };
 
 export const getImage = (weather) => {
@@ -50,4 +53,8 @@ export const getImage = (weather) => {
     default:
       return Clear;
   }
+};
+
+export const toFahrenheit = (temp) => {
+  return temp * 1.8 + 32;
 };
