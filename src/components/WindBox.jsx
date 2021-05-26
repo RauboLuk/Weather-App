@@ -6,7 +6,8 @@ const WindBox = ({
   windDirection = "0",
   windDirectionCompass = "N",
 }) => {
-  const rotation = `${windDirection}deg`
+  const rotation = `${windDirection}deg`;
+
   return (
     <HighlightsBox className="h-52">
       <p className="m-auto w-max">Wind status</p>
