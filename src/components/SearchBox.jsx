@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import useAxios from "axios-hooks";
 import CloseIcon from "@material-ui/icons/Close";
 import SearchIcon from "@material-ui/icons/Search";
@@ -22,8 +22,6 @@ const SearchBox = ({ setIsModalVisible, setWoeid }) => {
     setWoeid(id);
     setIsModalVisible(false);
   };
-
-  console.log(data);
 
   return (
     <div className="w-full min-h-full absolute top-0 left-0 z-10 bg-navyBlue-light text-gray-light font-rale font-medium p-4 flex flex-col">

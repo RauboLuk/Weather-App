@@ -5,11 +5,12 @@ import Week from "./components/Week";
 import Highlights from "./components/Highlights";
 import Footer from "./components/Footer";
 import SearchBox from "./components/SearchBox";
+import axios from "axios";
 
 function App() {
   const [unit, setUnit] = useState(localStorage.getItem("unit") || "C");
   const [woeid, setWoeid] = useState(localStorage.getItem("woeid") || "523920");
-  const [coords, setCoords] = useState(localStorage.getItem("coords") || "");
+  const [coords, setCoords] = useState("");
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [{ data, loading, error }, getWeather, manualCancel] = useAxios({
     url: `https://mycorsproxy-it.herokuapp.com/https://www.metaweather.com/api/location/${woeid}`,
@@ -22,19 +23,29 @@ function App() {
   });
 
   useEffect(() => {
-    getWeather();
+    getWeather().catch((e) => console.log(e.message));
     return () => {
       manualCancel();
     };
   }, [getWeather, manualCancel, woeid]);
 
   useEffect(() => {
-    localStorage.setItem("unit", unit);
-  }, [unit]);
+    if (coords) {
+      console.log(coords);
+      axios
+        .get(
+          `https://mycorsproxy-it.herokuapp.com/https://www.metaweather.com/api/location/search/?lattlong=${coords}`
+        )
+        .then((res) => {
+          console.log(res.data);
+          setWoeid(res?.data[0].woeid);
+        });
+    }
+  }, [coords]);
 
   useEffect(() => {
-    localStorage.setItem("coords", coords);
-  }, [coords]);
+    localStorage.setItem("unit", unit);
+  }, [unit]);
 
   useEffect(() => {
     localStorage.setItem("woeid", woeid);
@@ -42,11 +53,13 @@ function App() {
 
   if (isModalVisible)
     return (
-      <SearchBox
-        setIsModalVisible={setIsModalVisible}
-        setWoeid={setWoeid}
-      />
+      <SearchBox setIsModalVisible={setIsModalVisible} setWoeid={setWoeid} />
     );
+
+  if (error) {
+    manualCancel();
+    return <p>{JSON.stringify(error.message)}</p>;
+  }
 
   return (
     <div className="min-h-screen h-full font-rale font-medium xl:grid xl:grid-cols-3 xl:grid-rows-layout">
