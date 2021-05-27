@@ -4,12 +4,13 @@ import Today from "./components/Today";
 import Week from "./components/Week";
 import Highlights from "./components/Highlights";
 import Footer from "./components/Footer";
+import SearchBox from "./components/SearchBox";
 
 function App() {
   const [unit, setUnit] = useState(localStorage.getItem("unit") || "C");
   const [woeid, setWoeid] = useState(localStorage.getItem("woeid") || "523920");
   const [coords, setCoords] = useState(localStorage.getItem("coords") || "");
-  const [weather, setWeather] = useState({});
+  const [isModalVisible, setIsModalVisible] = useState(false);
   const [{ data, loading, error }, getWeather, manualCancel] = useAxios({
     url: `https://mycorsproxy-it.herokuapp.com/https://www.metaweather.com/api/location/${woeid}`,
     method: "get",
@@ -39,6 +40,14 @@ function App() {
     localStorage.setItem("woeid", woeid);
   }, [woeid]);
 
+  if (isModalVisible)
+    return (
+      <SearchBox
+        setIsModalVisible={setIsModalVisible}
+        setWoeid={setWoeid}
+      />
+    );
+
   return (
     <div className="min-h-screen h-full font-rale font-medium xl:grid xl:grid-cols-3 xl:grid-rows-layout">
       <Today
@@ -46,6 +55,7 @@ function App() {
         setCoords={setCoords}
         city={data?.title}
         unit={unit}
+        showModal={setIsModalVisible}
       />
       <Week
         weatherWeek={data?.consolidated_weather}

@@ -4,7 +4,7 @@ import background from "../assets/images/Cloud-background.png";
 import RoundedButton from "./RoundedButton";
 import { formatDate, getImage, relativeDate, toFahrenheit } from "../utils";
 
-const Today = ({ weather, city, setCoords, unit }) => {
+const Today = ({ weather, city, setCoords, unit, showModal }) => {
   const handleClick = (e) => {
     navigator.geolocation.getCurrentPosition(
       ({ coords: { latitude, longitude } }) => {
@@ -18,7 +18,10 @@ const Today = ({ weather, city, setCoords, unit }) => {
   return (
     <div className="bg-navyBlue-light pb-24 xl:col-span-1 xl:row-span-3">
       <header className="m-auto max-w-screen-md flex justify-between px-3 pt-4 md:pt-10 md:px-8">
-        <button className="bg-gray-dark text-gray-light px-4 max-h-10 text-base focus:ring-2 focus:ring-blue-400">
+        <button
+          className="bg-gray-dark text-gray-light px-4 max-h-10 text-base focus:ring-2 focus:ring-blue-400"
+          onClick={() => showModal(true)}
+        >
           Seach for places
         </button>
         <RoundedButton handleClick={handleClick}>
