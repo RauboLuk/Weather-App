@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+<h1 align="center">Weather-App</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+   Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
+</div>
 
-## Available Scripts
+<div align="center">
+  <h3>
+    <!-- <a href="https://{your-demo-link.your-domain}">
+      Demo
+    </a>
+    <span> | </span> -->
+    <a href="https://github.com/RauboLuk/Weather-App">
+      Solution
+    </a>
+    <span> | </span>
+    <a href="https://devchallenges.io/challenges/mM1UIenRhK808W8qmLWv">
+      Challenge
+    </a>
+  </h3>
+</div>
 
-In the project directory, you can run:
+<!-- TABLE OF CONTENTS -->
 
-### `yarn start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Overview](#overview)
+  - [Built With](#built-with)
+- [Features](#features)
+- [How to use](#how-to-use)
+- [Contact](#contact)
+- [Acknowledgements](#acknowledgements)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Overview
 
-### `yarn test`
+![screenshot](./assets/weatherApp0.gif)
+ETC~15h
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Built With
 
-### `yarn build`
+- [API](https://www.metaweather.com/api/)
+- [date-fns](https://date-fns.org/)
+- [React](https://reactjs.org/)
+- [Tailwind](https://tailwindcss.com/)
+<!-- - [Axios](https://axios-http.com/)
+- [axios-hooks](https://www.npmjs.com/package/axios-hooks)
+- [CRACO](https://www.npmjs.com/package/@craco/craco)
+- [Cors-anywhere](https://cors-anywhere.herokuapp.com/)
+- [Material-UI](https://material-ui.com/)
+- [Prettier](https://prettier.io/) -->
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/mM1UIenRhK808W8qmLWv) was to build an application to complete the given user stories.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [x] **User story**: I can see city weather as default, preferably my current location
+- [x] **User story**: I can search for city
+- [x] **User story**: I can see weather of today and the next 5 days
+- [x] **User story**: I can see the date and location of the weather
+- [x] **User story**: I can see according to image for each type of weather
+- [x] **User story**: I can see the min and max degree each day
+- [x] **User story**: I can see wind status and wind direction
+- [x] **User story**: I can see humidity percentage
+- [x] **User story**: I can see a visibility indicator
+- [x] **User story**: I can see the air pressure number
+- [x] **User story**: I can request my current location weather
+- [x] **User story**: I can convert temperature in Celcius to Fahrenheit and vice versa
 
-### `yarn eject`
+## How To Use
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<!-- Example: -->
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+# Install dependencies
+$ npm install
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Run the app
+$ npm start
+```
 
-## Learn More
+## Acknowledgements
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [React Background Image Tutorial](https://www.freecodecamp.org/news/react-background-image-tutorial-how-to-set-backgroundimage-with-inline-css-style/)
+- [Change color of PNG image via CSS?](https://stackoverflow.com/a/53206065)
+- [Tailwind parenthover behaviour](https://github.com/tailwindlabs/discuss/issues/115#issuecomment-362100955)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contact
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- GitHub [@RauboLuk](https://github.com/RauboLuk)
+- Stack Overflow [@RauboLuk](https://stackoverflow.com/users/9185799/rauboluk)
