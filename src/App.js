@@ -4,7 +4,6 @@ import Today from "./components/Today";
 import Week from "./components/Week";
 import Highlights from "./components/Highlights";
 import Footer from "./components/Footer";
-import axios from "axios";
 
 import Backdrop from "@material-ui/core/Backdrop";
 import CircularProgress from "@material-ui/core/CircularProgress";
@@ -28,6 +27,7 @@ function App() {
     },
     { manual: true }
   );
+  console.log(data);
 
   useEffect(() => {
     getWeather().catch((e) => console.error(e.message));
