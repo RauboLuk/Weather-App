@@ -12,15 +12,12 @@ function App() {
   const [unit, setUnit] = useState(localStorage.getItem("unit") || "C");
   const [woeid, setWoeid] = useState(localStorage.getItem("woeid") || "523920");
   const [coords, setCoords] = useState("");
+  const [loadingCoords, setLoadingCoords] = useState(false);
   const [{ data, loading, error }, getWeather, manualCancel] = useAxios({
     url: `https://mycorsproxy-it.herokuapp.com/https://www.metaweather.com/api/location/${woeid}`,
     method: "get",
   });
-  const [
-    { loadingLocation },
-    getLocation,
-    manualCancelLocation,
-  ] = useAxios(
+  const [{ loadingLocation }, getLocation, manualCancelLocation] = useAxios(
     {
       url: `https://mycorsproxy-it.herokuapp.com/https://www.metaweather.com/api/location/search/?lattlong=${coords}`,
       method: "get",
@@ -39,7 +36,7 @@ function App() {
   useEffect(() => {
     if (coords) {
       getLocation()
-        .then(res => {
+        .then((res) => {
           setWoeid(res?.data[0].woeid);
         })
         .catch((e) => console.error(e.message));
@@ -61,7 +58,7 @@ function App() {
     <div>
       <Backdrop
         className="text-blue-400"
-        open={loading || loadingLocation || error || false}
+        open={loading || loadingLocation || loadingCoords || error || false}
         style={{ zIndex: 1, backgroundColor: "rgba(0, 0, 0, 0.95)" }}
       >
         {error ? (
@@ -79,6 +76,7 @@ function App() {
           city={data?.title}
           unit={unit}
           setWoeid={setWoeid}
+          setLoadingCoords={setLoadingCoords}
         />
         <Week
           weatherWeek={data?.consolidated_weather}

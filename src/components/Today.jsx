@@ -6,13 +6,22 @@ import RoundedButton from "./RoundedButton";
 import { formatDate, getImage, relativeDate, toFahrenheit } from "../utils";
 import SearchBox from "./SearchBox";
 
-const Today = ({ weather, city, setCoords, unit, setWoeid }) => {
+const Today = ({
+  weather,
+  city,
+  setCoords,
+  unit,
+  setWoeid,
+  setLoadingCoords,
+}) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   const handleClick = () => {
+    setLoadingCoords(true);
     navigator.geolocation.getCurrentPosition(
       ({ coords: { latitude, longitude } }) => {
         setCoords(`${latitude},${longitude}`);
+        setLoadingCoords(false);
       }
     );
   };
