@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Weather-App/static/css/main.de0d90e1.chunk.css",
-    "main.js": "/Weather-App/static/js/main.745ad438.chunk.js",
-    "main.js.map": "/Weather-App/static/js/main.745ad438.chunk.js.map",
+    "main.css": "/Weather-App/static/css/main.1a24c30b.chunk.css",
+    "main.js": "/Weather-App/static/js/main.010efb83.chunk.js",
+    "main.js.map": "/Weather-App/static/js/main.010efb83.chunk.js.map",
     "runtime-main.js": "/Weather-App/static/js/runtime-main.1c73c452.js",
     "runtime-main.js.map": "/Weather-App/static/js/runtime-main.1c73c452.js.map",
     "static/js/2.b2dcd064.chunk.js": "/Weather-App/static/js/2.b2dcd064.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.f458d74c.chunk.js": "/Weather-App/static/js/3.f458d74c.chunk.js",
     "static/js/3.f458d74c.chunk.js.map": "/Weather-App/static/js/3.f458d74c.chunk.js.map",
     "index.html": "/Weather-App/index.html",
-    "static/css/main.de0d90e1.chunk.css.map": "/Weather-App/static/css/main.de0d90e1.chunk.css.map",
+    "static/css/main.1a24c30b.chunk.css.map": "/Weather-App/static/css/main.1a24c30b.chunk.css.map",
     "static/js/2.b2dcd064.chunk.js.LICENSE.txt": "/Weather-App/static/js/2.b2dcd064.chunk.js.LICENSE.txt",
     "static/media/Clear.6e4f36b6.png": "/Weather-App/static/media/Clear.6e4f36b6.png",
     "static/media/Cloud-background.f88244c2.png": "/Weather-App/static/media/Cloud-background.f88244c2.png",
@@ -21,7 +21,7 @@
   "entrypoints": [
     "static/js/runtime-main.1c73c452.js",
     "static/js/2.b2dcd064.chunk.js",
-    "static/css/main.de0d90e1.chunk.css",
-    "static/js/main.745ad438.chunk.js"
+    "static/css/main.1a24c30b.chunk.css",
+    "static/js/main.010efb83.chunk.js"
   ]
 }
