@@ -6,10 +6,10 @@
 
 <div align="center">
   <h3>
-    <!-- <a href="https://{your-demo-link.your-domain}">
+    <a href="https://rauboluk.github.io/Weather-App/">
       Demo
     </a>
-    <span> | </span> -->
+    <span> | </span>
     <a href="https://github.com/RauboLuk/Weather-App">
       Solution
     </a>
