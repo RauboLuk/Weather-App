@@ -17,7 +17,9 @@ const WindBox = ({
       </p>
       <div className="m-auto mt-6 w-max flex gap-2">
         <div className="w-6 h-6 bg-gray-dark rounded-full flex justify-center items-center transform-gpu">
-          <NavigationIcon style={{ fontSize: 15, rotate: rotation }} />
+          <NavigationIcon
+            style={{ fontSize: 15, transform: `rotate(${rotation})` }}
+          />
         </div>
         <p className="text-sm flex items-center">{windDirectionCompass}</p>
       </div>
